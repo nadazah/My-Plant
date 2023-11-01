@@ -1,0 +1,135 @@
+body{
+    background-image: none;
+}
+.aboutUs{
+    background-image: url("image/bac.jpg");
+    background: rgb(231,225,103);
+    background: linear-gradient(90deg, rgb(0, 164, 240) 0%, rgb(5, 187, 123) 100%);
+    font-family: 'Papyrus', cursive;
+    height: 30%px;
+    text-align: center;
+}
+.aboutUs h1{
+    padding-top: 5%;
+    font-size: 90px;
+    color:rgb(255, 255, 255) ;
+}
+.aboutUs p {
+    font-size: 40px;
+    padding: 0px 100px 30px 100px ; 
+}
+.aboutUs .material-symbols-outlined{
+    font-size: 100px ;
+    color: rgb(255, 255, 255);
+}
+.collection{
+    background-image: url("image/bac.jpg");
+    font-family: 'Papyrus', cursive;
+    height: 30%;
+    text-align: center;
+    padding-bottom: 5%;
+    padding-top : 5% ; 
+}
+.collection > div > h2{
+    font-size: 60px;
+    color:#ffc300 ; 
+}
+.collection > div > p {
+    font-size: 30px;
+    padding-bottom: 5%;
+    color : #acb4bb ; 
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+  
+  .card {
+    font-family: 'Source Code Pro', monospace;
+    margin: 10px;
+    padding: 20px;
+    width: 500px;
+    min-height: 200px;
+    display: grid;
+    grid-template-rows: auto;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+  }
+  
+  .card:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+  }
+  
+  .card__link,
+  .card__exit,
+  .card__icon {
+    position: relative;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .card__link::after {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: all 0.5s;
+  }
+  
+  .card__link:hover::after {
+    width: 100%;
+  }
+  
+  .card__exit {
+    grid-row: 1/2;
+    justify-self: end;
+  }
+  
+  .card__icon {
+    grid-row: 2/3;
+    font-size: 30px;
+  }
+  
+  .card__title {
+    grid-row: 3/4;
+    font-weight: 400;
+    color: #ffffff;
+  }
+  
+  .card__apply {
+    grid-row: 4/5;
+    align-self: center;
+  }
+  
+  /* CARD BACKGROUNDS */
+  
+  .card-1 {
+    background: rgb(96, 2, 47);
+background: radial-gradient(circle, rgb(249, 125, 222) 0%, rgb(217, 101, 136) 100%);
+  }
+  
+  .card-2 {
+    background: rgb(169,109,250);
+    background: radial-gradient(circle, rgba(169,109,250,1) 0%, rgba(0,44,255,1) 100%);
+  }
+  
+  .card-3 {
+    background: radial-gradient(#76b2fe, #b69efe);
+  }
+  
+  .card-4 {
+    background: rgb(101, 58, 92);
+    background: radial-gradient(circle, rgba(250,142,109,1) 0%, rgba(255,0,25,1) 100%);
+  }
+  
+  .card-5 {
+    background: radial-gradient(#f588d8, #2072d0);
+  }

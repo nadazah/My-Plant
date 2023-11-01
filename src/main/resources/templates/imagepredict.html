@@ -1,0 +1,431 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <meta charset="utf-8" />
+    <title>About Us</title>
+<style>
+body{
+    background-image: url("https://t4.ftcdn.net/jpg/02/03/46/83/360_F_203468368_hm1ckLwwhUNUviajDwNm3x0tbVKDgTJD.jpg");
+}
+.aboutUs{
+    background-image: url("image/bac.jpg");
+    background: rgb(231,225,103);
+    background: linear-gradient(90deg, rgb(0, 164, 240,0.6) 0%, rgb(5, 187, 123) 100%);
+    font-family: 'Papyrus', cursive;
+    height: 30%px;
+    text-align: center;
+}
+.aboutUs h1{
+    padding-top: 5%;
+    font-size: 90px;
+    color:rgb(255, 255, 255) ;
+}
+.aboutUs p {
+    font-size: 40px;
+    padding: 0px 100px 30px 100px ; 
+}
+.aboutUs .material-symbols-outlined{
+    font-size: 100px ;
+    color: rgb(255, 255, 255);
+}
+.collection{
+    background-image: url("image/bac.jpg");
+    font-family: 'Papyrus', cursive;
+    height: 30%;
+    text-align: center;
+    padding-bottom: 5%;
+    padding-top : 5% ; 
+}
+.collection > div > h2{
+    font-size: 60px;
+    color:#ffc300 ; 
+}
+.collection > div > p {
+    font-size: 30px;
+    padding-bottom: 5%;
+    color : #acb4bb ; 
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+  
+  .card {
+    font-family: 'Source Code Pro', monospace;
+    margin: 10px;
+    padding: 20px;
+    width: 500px;
+    min-height: 200px;
+    display: grid;
+    grid-template-rows: auto;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+  }
+  
+  .card:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+  }
+  
+  .card__link,
+  .card__exit,
+  .card__icon {
+    position: relative;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .card__link::after {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: all 0.5s;
+  }
+  
+  .card__link:hover::after {
+    width: 100%;
+  }
+  
+  .card__exit {
+    grid-row: 1/2;
+    justify-self: end;
+  }
+  
+  .card__icon {
+    grid-row: 2/3;
+    font-size: 30px;
+  }
+  
+  .card__title {
+    grid-row: 3/4;
+    font-weight: 400;
+    color: #ffffff;
+  }
+  
+  .card__apply {
+    grid-row: 4/5;
+    align-self: center;
+  }
+  
+  /* CARD BACKGROUNDS */
+  
+  .card-1 {
+    background: rgb(96, 2, 47);
+  }
+  
+  .card-2 {
+    background: radial-gradient(#76b2fe, #b69efe);
+    
+  }
+  
+  .card-3 {
+    background: radial-gradient(#76b2fe, #b69efe);
+  }
+  
+  .card-4 {
+    background: radial-gradient(#76b2fe, #b69efe);
+  }
+  
+  .card-5 {
+    background: radial-gradient(#76b2fe, #b69efe);
+  }
+
+  #pageContent{
+z-index: -1;
+text-align: center;
+justify-content: center;
+align-items: center;
+}
+
+main h1 {
+  margin-bottom: 1px;
+  font-size: 3rem;
+  color : #ff0000
+}
+main p{
+  margin-bottom: 20px;
+  margin-left : 30px;
+  font-size: 20px;
+  color : #ff0000 ; 
+}
+
+#frmContact{
+  background-color: #15172b;
+  box-sizing: border-box;
+  padding : 10px 10px 10px 10px ;
+  width: 50%;
+  border-radius: 20px;
+  margin-bottom: 5%;
+  margin: auto;
+  
+}
+.input-container {
+  height: 50px;
+  position: relative;
+  width: 100%;
+}
+
+.ic1 {
+  margin-top: 40px;
+}
+
+.ic2 {
+  margin-top: 30px;
+}
+
+.input {
+  background-color: #303245;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 18px;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+}
+
+.cut {
+  background-color: #15172b;
+  border-radius: 10px;
+  height: 20px;
+  left: 20px;
+  position: absolute;
+  top: -20px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 76px;
+}
+
+.cut-short {
+  width: 50px;
+}
+
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+}
+
+.placeholder {
+  color: #65657b;
+  font-family: sans-serif;
+  left: 20px;
+  line-height: 14px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 20px;
+}
+
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
+}
+
+.input:not(:placeholder-shown) ~ .placeholder {
+  color: #808097;
+}
+
+.input:focus ~ .placeholder {
+  color: #dc2f55;
+}
+
+.submit {
+  background-color: #08d;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 38px;
+  outline: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.submit:active {
+  background-color: #06b;
+}
+
+</style>
+
+
+   </head>
+<body style ="padding-bottom: 150px;">	
+	<!--===============================================================================================-->	
+<nav class="navbar navbar-green default-color" style="background-color: rgb(206, 255, 239);">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">My Plant</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="modell">About Us</a></li>
+	  <li class="active"><a href="/home">Detection par expert</a></li>
+	  <li class="active"><a th:href="@{/pageexpert}">page expert</a></li>
+     
+      <li><a href="avisexpert">Avis expert</a></li>
+	  <li><a href="listMaladiePlant">listMaladie</a></li>
+	  
+      <li><a href="ajoutermaladie">Ajouter une nouvelle maladie</a></li>
+	  
+	  
+	  
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<section id="pageContent">
+  <main>
+
+      <div class="aboutUs" >
+          <h1>About My Plant</h1>
+          <p style="font-size: 30px; color:black; font-weight: bold;">
+              Bienvenue sur notre site dédié aux maladies des plantes ! Notre objectif est de fournir des informations et des ressources précieuses pour aider à identifier et à gérer efficacement les maladies des plantes. Nous offrons une mine d'informations sur différents types de maladies des plantes, y compris leurs causes, leurs symptômes et leurs traitements, ainsi que des astuces pour prévenir les maladies des plantes et maintenir des plantes saines.
+          </p>
+          
+      </div>
+
+     <div class="collection">
+          <div>
+              <h2 style="color: yellowgreen;">
+                  Notre équipe
+              </h2>
+              
+      
+          </div>
+      
+          <!-- Ajouter suivant le besoin-->   
+          
+          <div class="cards">
+
+
+              <div class="card card-2">
+                <div class="card__icon">
+                  Jawher Beldi
+                 </div>
+                <p class="card__exit"></p>
+                <h2 class="card__title">ICT engineering Student</h2>
+              </div>
+
+
+              <div class="card card-2">
+                  <div class="card__icon">
+                      Bechir Yengui
+                     </div>
+                    <p class="card__exit"></p>
+                    <h2 class="card__title">ICT engineering Student</h2>
+              </div>
+
+
+              <div class="card card-3">
+                  <div class="card__icon">
+                      Achref Abidi
+                     </div>
+                    <p class="card__exit"></p>
+                    <h2 class="card__title">ICT engineering Student</h2>
+              </div>
+
+
+              <div class="card card-4">
+                  <div class="card__icon">
+                      Mohamed Ayari
+                     </div>
+                    <p class="card__exit"></p>
+                    <h2 class="card__title">ICT engineering Student</h2>
+              </div>
+
+
+              <div class="card card-5">
+                  <div class="card__icon">
+                      Saifeddine Wellany
+                     </div>
+                    <p class="card__exit"></p>
+                    <h2 class="card__title">ICT engineering Student</h2>
+              </div>
+
+
+              <div class="card card-2">
+                  <div class="card__icon">
+                     Nada Zahra
+                     </div>
+                    <p class="card__exit"></p>
+                    <h2 class="card__title">ICT engineering Student</h2>
+              </div>
+
+
+              
+          </div> 
+          
+     </div>
+
+  </main>
+</section><!--Ici se termine le #pageContent-->
+
+
+<!-------------------------------------------------------------------------------------------->
+
+<section id="pageContent" class="oneCol contact">
+  <main>
+      <h1 style="color: yellowgreen;">Contactez-nous</h1>
+      <p style="color: yellowgreen;">Merci de compléter le formulaire suivant pour nous contacter</p>
+      <form id="frmContact"  style ="padding-bottom: 10px;" >
+        <a href="modell"><button type="submit" class="submit">Envoyer</button></a>
+          <div class="input-container ic1">
+              <input id="firstname" class="input" type="text" placeholder=" " />
+              <div class="cut"></div>
+              <label for="firstname" class="placeholder">First name</label>
+            </div>
+
+            <div class="input-container ic2">
+              <input id="lastname" class="input" type="text" placeholder=" " />
+              <div class="cut"></div>
+              <label for="lastname" class="placeholder">Last name</label>
+            </div>
+           
+            
+      
+            <div class="input-container ic2">
+              <textarea name="message" id="message"  class="input" placeholder=" "></textarea>
+              <div class="cut cut-short"></div>
+              <label for="message" class="placeholder">Votre message</label>
+            </div>
+            <div class="input-container ic2">
+              <input id="email" class="input" type="text" placeholder=" " />
+              <div class="cut cut-short"></div>
+              <label for="email" class="placeholder">Email</>
+            </div>
+            
+      </form>
+  </main>
+</section><!--Ici se termine le #pageContent-->
+
+<!-------------------------------------------------------------------------------------------->
+
+
+</body>
+</html>

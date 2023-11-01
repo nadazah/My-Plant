@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../static/css/AboutUs.css"
+	th:href="@{/css/myStyle.css}" />
+    <meta charset="utf-8" />
+    <title>About Us</title>
+    <style>
+
+
+
+    </style>
+<body>	
+	<!--===============================================================================================-->	
+  <nav class="navbar navbar-green default-color" style="background-color: rgb(206, 255, 239);">  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">My Plant</a>
+    </div>
+    <ul class="nav navbar-nav">
+	  <li class="active"><a href="/home">Detection par expert</a></li>
+	  <li class="active"><a th:href="@{/pageexpert}">page expert</a></li>
+      <li><a href="modell">About Us</a></li>
+      <li><a href="avisexpert">Avis expert</a></li>
+	  <li><a href="listMaladiePlant">listMaladie</a></li>
+	  
+      <li><a href="ajoutermaladie">Ajouter une nouvelle maladie</a></li>
+	  
+	  
+	  
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>
+    </ul>
+  </div>
+</nav>
+<section id="pageContent">
+    <main>
+
+        <div class="aboutUs">
+            <h1>About Web Library</h1>
+            <p>
+                Our Library can offer you several books if you are intrested in learning about web development
+                essentiel concepts and tools 
+            </p>
+            <i class="material-symbols-outlined">
+                keyboard_double_arrow_down
+            </i>
+        </div>
+
+       <div class="collection">
+            <div>
+                <h2>
+                    Our collection
+                </h2>
+                <p>We have different kind of books varied from web design to web development</p>
+        
+            </div>
+        
+            <!-- Ajouter suivant le besoin-->   
+            
+            <div class="cards">
+                <div class="card card-1">
+                  <div class="card__icon"><i class="material-symbols-outlined">
+                    menu_book
+                    </i></div>
+                  <p class="card__exit"><i class="fas fa-times"></i></p>
+                  <h2 class="card__title">CSS3 for everyone</h2>
+                  <p class="card__apply">
+                    <a class="card__link" href="#">Read Now <i class="fas fa-arrow-right"></i></a>
+                  </p>
+                </div>
+                <div class="card card-2">
+                    <div class="card__icon"><i class="material-symbols-outlined">
+                        menu_book
+                        </i></div>
+                    <p class="card__exit"><i class="fas fa-times"></i></p>
+                    <h2 class="card__title">HTML5 for beginners</h2>
+                    <p class="card__apply">
+                      <a class="card__link" href="#">Read Now <i class="fas fa-arrow-right"></i></a>
+                    </p>
+                </div>
+                <div class="card card-3">
+                    <div class="card__icon"><i class="material-symbols-outlined">
+                        menu_book
+                        </i></div>
+                    <p class="card__exit"><i class="fas fa-times"></i></p>
+                    <h2 class="card__title">+500 web design patterns</h2>
+                    <p class="card__apply">
+                      <a class="card__link" href="#">Read Now <i class="fas fa-arrow-right"></i></a>
+                    </p>
+                </div>
+                <div class="card card-4">
+                    <div class="card__icon"><i class="material-symbols-outlined">
+                        menu_book
+                        </i></div>
+                    <p class="card__exit"><i class="fas fa-times"></i></p>
+                    <h2 class="card__title">How to build a responsive web page</h2>
+                    <p class="card__apply">
+                      <a class="card__link" href="#">Read Now<i class="fas fa-arrow-right"></i></a>
+                    </p>
+                </div>
+                <div class="card card-5">
+                    <div class="card__icon"><i class="material-symbols-outlined">
+                        menu_book
+                        </i></div>
+                    <p class="card__exit"><i class="fas fa-times"></i></p>
+                    <h2 class="card__title">JavaScript top 100 tips&tricks must to know</h2>
+                    <p class="card__apply">
+                      <a class="card__link" href="#">Read Now <i class="fas fa-arrow-right"></i></a>
+                    </p>
+                </div>
+                <div class="card card-1">
+                    <div class="card__icon"><i class="material-symbols-outlined">
+                        menu_book
+                        </i></div>
+                    <p class="card__exit"><i class="fas fa-times"></i></p>
+                    <h2 class="card__title">How to become a professional web developer</h2>
+                    <p class="card__apply">
+                      <a class="card__link" href="#">Read Now <i class="fas fa-arrow-right"></i></a>
+                    </p>
+                </div>
+                
+            </div> 
+            
+       </div>
+
+    </main>
+</section><!--Ici se termine le #pageContent-->
+
+<div class="footer-clean" style="position:absolute;
+    bottom: -190px;;padding-right: 100%;">
+        <footer>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Maladie des plantes</a></li>
+                            <li><a href="#">Agriculture</a></li>
+                            <li><a href="#">Conseil</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Supcom</a></li>
+                            <li><a href="#">Developpement</a></li>
+                            <li><a href="#">Service Web </a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Careers</h3>
+                        <ul>
+                            <li><a href="#">Developpement web</a></li>
+                            <li><a href="#">Deep Learning</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div >
+
+                        <p class="copyright" style="font-size: 20px;">My Plant © 2023</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
